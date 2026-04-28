@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='heroSection relative text-secondary flex flex-col items-left justify-end p-20'>
+    <div className='heroSection relative text-secondary flex flex-col items-left justify-end p-20 mb-30'>
       <div className="head_spans">
         <span>
           <i class="fa-solid fa-star"></i>
