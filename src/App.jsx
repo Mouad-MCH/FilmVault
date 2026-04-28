@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection'
 import MovieCard from './components/MovieCard'
 import MovieList from './components/MovieList'
 import Navbar from './components/Navbar'
+import TopMovies from './components/TopMovies.jsx'
 
 const App = () => {
 
@@ -10,7 +11,7 @@ const App = () => {
     <div>
       <Navbar/>
       <HeroSection />
-      <MovieList movies={movieData}/>
+      <TopMovies movies={movieData}/>
     </div>
   )
 }
