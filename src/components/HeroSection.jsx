@@ -27,7 +27,7 @@ const HeroSection = () => {
         <button className="btn-secondary">Add to Watchlist</button>
       </div>
       
-      <div className='absolute overflow-hidden bottom-[-100px] max-lg:right-30 max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:bottom-[-330px] right-60 max-md:right-10 bg-primary w-60 h-95 rounded-lg '>
+      <div className='absolute border-2 border-primary overflow-hidden bottom-[-100px] max-lg:right-30 max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:bottom-[-330px] right-60 max-md:right-10 bg-primary w-60 h-95 rounded-lg '>
         <img className='w-full h-full bg-cover' src="src/assets/Background.png" alt="photo" />
       </div>
     </div>
