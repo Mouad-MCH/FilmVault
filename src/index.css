@@ -165,10 +165,10 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply  m-0 p-0;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#09090B] text-foreground overflow-hidden;
   }
 }
 
@@ -192,6 +192,52 @@
       @apply px-5 py-2 outline-0 rounded-lg bg-primary hover:bg-secondary transition-all duration-75 cursor-pointer shadow-xs shadow-primary;
     }
   }
+
+  .heroSection {
+    background-image:
+      linear-gradient(to bottom, rgba(10,10,15,0.15), rgba(1, 1, 1, 0.95)),
+      url('./assets/Background.png');
+    @apply bg-cover bg-center bg-no-repeat w-screen h-200 max-sm:text-center;
+
+    & .head_spans {
+      @apply flex items-center gap-5 mb-5;
+
+      & span {
+        @apply bg-accent-foreground  flex-center text-[16px] rounded-full w-fit h-10 px-5 font-bold border-secondary border-1;
+      }
+
+      & span:first-child {
+        @apply flex-center gap-2 bg-primary;
+      }
+    }
+
+    & .head_title {
+      @apply font-extrabold max-lg:text-6xl text-7xl my-5;
+    }
+
+    & .head_desc {
+      @apply lg:max-w-200 max-lg:max-w-100 mb-6;
+    }
+
+    .buttons {
+      @apply flex-center gap-5 justify-start;
+
+      & button {
+        @apply bg-red-400 px-5 py-4 rounded-lg cursor-pointer; 
+      }
+
+      & button:first-child {
+        @apply bg-primary hover:bg-secondary hover:text-foreground shadow-sm transition-all duration-300;
+      }
+
+      & button:nth-child(2) {
+        background-color: transparent;
+        @apply border-2 border-secondary;
+      }
+    }
+  }
+
+  
 }
 
 
