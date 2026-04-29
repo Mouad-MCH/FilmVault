@@ -1,23 +1,21 @@
-import React from 'react'
+import { top_movies } from '../utils/movieUtils.js'
 
-const HeroSection = () => {
+const HeroSection = ({ movies }) => {
+  const topMovie = top_movies(movies)[0]
   return (
     <div className='heroSection relative text-secondary flex flex-col items-left justify-end p-20 mb-30'>
       <div className="head_spans">
         <span>
           <i class="fa-solid fa-star"></i>
-          9.5
+          { topMovie?.rate.aggregaterate }
         </span>
-        <span> Sci-Fi Epic</span>
-        <span> 2024 </span>
+        <span>{ topMovie?.genres[0] }</span>
+        <span> {topMovie?.date} </span>
       </div>
 
-      <h1 className='head_title'>The Obsidian Echo</h1>
+      <h1 className='head_title'>{ topMovie?.title }</h1>
       <p className='head_desc'>
-        In a distant future, humanity's last hope 
-        lies in the hands of a rogue scientist and a fearless pilot as they
-         embark on a perilous journey to save Earth from an impending 
-         cosmic catastrophe.
+        {topMovie?.plot}
       </p>
 
       <div className="buttons">
@@ -28,7 +26,7 @@ const HeroSection = () => {
       </div>
       
       <div className='absolute border-2 border-primary overflow-hidden bottom-[-100px] max-lg:right-30 max-sm:left-[50%] max-sm:translate-x-[-50%] max-sm:bottom-[-330px] right-60 max-md:right-10 bg-primary w-60 h-95 rounded-lg '>
-        <img className='w-full h-full bg-cover' src="src/assets/Background.png" alt="photo" />
+        <img className='w-full h-full bg-cover' src={topMovie?.image.url} alt="photo" />
       </div>
     </div>
   )

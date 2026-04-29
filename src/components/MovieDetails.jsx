@@ -1,5 +1,5 @@
 
-const MovieDetails = ({ movie, setSelectMovie }) => {
+const MovieDetails = ({ movie, setSelectMovie, setType, setIsModalOpen }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex-center">
       <div className="movie_details w-300 h-150 bg-[#1A1823] rounded-lg flex items-center overflow-hidden">
@@ -65,7 +65,10 @@ const MovieDetails = ({ movie, setSelectMovie }) => {
               <button className="bg-primary shadow-lg shadow-primary text-white outline-0 px-6 py-3 rounded-lg font-bold hover:bg-secondary hover:text-foreground shadow-sm transition-all duration-300 cursor-pointer">
                 Watch Trailer
               </button>
-              <button className="cursor-pointer text-white outline-0 px-6 py-3 rounded-lg border-2 border-primary">Edite Details</button>
+              <button 
+                className="cursor-pointer text-white outline-0 px-6 py-3 rounded-lg border-2 border-primary"
+                onClick={() => {setType("edit"); setIsModalOpen(true)}}
+              >Edite Details</button>
             </div>
 
             <div className="delete_details cursor-pointer">
