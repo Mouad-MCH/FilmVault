@@ -170,6 +170,12 @@
   body {
     @apply bg-[#09090B] text-foreground overflow-x-hidden;
   }
+
+  .genres {
+    & p {
+      @apply border border-primary text-secondary font-bold bg-foreground px-4 py-1 rounded-full;
+    }
+  }
 }
 
 @layer components {
@@ -191,6 +197,7 @@
     & button {
       @apply px-5 py-2 outline-0 rounded-lg bg-primary hover:bg-secondary transition-all duration-75 cursor-pointer shadow-xs shadow-primary;
     }
+
   }
 
   .heroSection {

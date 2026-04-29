@@ -1,7 +1,7 @@
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie , setSelectMovie}) => {
   return (
-    <div className="movieCard">
+    <div className="movieCard" onClick={() => setSelectMovie(movie)}>
       <img src={ movie.image.url } alt="movie" />
       
       <div className="content">

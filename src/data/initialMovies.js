@@ -91,14 +91,14 @@ export const movieData = [
     {
         id: "tt8772296",
         type: "tvSeries",
-        title: "Euphoria",
-        originalTitle: "Euphoria",
+        title: "If Wishes Could Kill",
+        originalTitle: "Girigo",
         image: {
-            url: "https://m.media-amazon.com/images/M/MV5BYzg5MTVmNjgtMGQ3Zi00YThlLWFjMzgtYzc2NGUyMzE2MWQ1XkEyXkFqcGc@._V1_.jpg",
+            url: "https://m.media-amazon.com/images/M/MV5BMTIyODI5YzgtMjg1OC00OTMzLWE1ODgtNDQzMjViMDZhOTQ1XkEyXkFqcGc@._V1_.jpg",
             width: 510,
             height: 755,
         },
-        date: 2019,
+        date: 2026,
         enddate: 2026,
         runtimeSeconds: 3600,
         genres: ["Drama"],
