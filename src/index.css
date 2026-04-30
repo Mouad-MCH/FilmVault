@@ -243,6 +243,7 @@
       }
     }
   }
+
   .movieCard {
     @apply w-60 h-fit p-2 rounded-lg overflow-hidden shadow-md hover:shadow-none transition-all duration-300 -translate-y-5.5 text-secondary bg-[#231b24] shadow-primary cursor-pointer;
  
@@ -267,6 +268,9 @@
     }
   }
 
+  .movie_form_modal {
+    @apply w-150 h-fit rounded-lg bg-foreground;
+  }
   
 }
 
