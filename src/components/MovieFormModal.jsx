@@ -10,11 +10,14 @@ const MovieFormModal = ({ movie, setIsModalOpen, type = "add", onSave }) => {
         title: form.title.value,
         genres: [form.genre.value],
         date: form.year.value,
-        polt: form.description.value,
+        plot: form.description.value,
         image: {
             url: form.image.value
         },
-        rate: { aggregaterate: Number(form.rating.value) }
+        rate: { aggregaterate: Number(form.rating.value) },
+        actors: form.actors.value.split(",").map((actor) => actor.trim()),
+        trailerUrl: form.trailer.value,
+        director: form.director.value,
     }
 
     onSave(newMovie)
@@ -171,7 +174,7 @@ const MovieFormModal = ({ movie, setIsModalOpen, type = "add", onSave }) => {
             <input
               id="trailer"
               name="trailer"
-              defaultValue={movie?.trailer || ""}
+              defaultValue={movie?.trailerUrl || ""}
               placeholder="https://"
               className="bg-black/40 border border-primary rounded-lg px-4 py-3 text-secondary outline-none"
             />

@@ -1,5 +1,5 @@
 
-const MovieDetails = ({ movie, setSelectMovie, setType, setIsModalOpen }) => {
+const MovieDetails = ({ movie, setSelectMovie, setType, setIsModalOpen, deleteMovie }) => {
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-black/50 flex-center">
       <div className="movie_details w-300 h-150 bg-[#1A1823] rounded-lg flex items-center overflow-hidden">
@@ -50,11 +50,15 @@ const MovieDetails = ({ movie, setSelectMovie, setType, setIsModalOpen }) => {
              <div className="flex items-center justify-between mt-5 w-full">
               <div>
                 <h3 className="text-accent font-bold">DIRECTOR</h3>
-                <p className="text-secondary">Elias Vance</p>
+                <p className="text-secondary">{ movie.director }</p>
               </div>
               <div>
                 <h3 className="text-accent font-bold">STARRING</h3>
-                <p className="text-secondary">Sarah Connor, David Oyelowo, Anya Taylor-Joy</p>
+                <p className="text-secondary">
+                  {
+                    movie?.actors?.join(', ')
+                  }
+                </p>
               </div>
              </div>
 
@@ -72,7 +76,7 @@ const MovieDetails = ({ movie, setSelectMovie, setType, setIsModalOpen }) => {
             </div>
 
             <div className="delete_details cursor-pointer">
-              <p className="font-bold text-accent hover:text-red-300">Delete</p>
+              <p className="font-bold text-accent hover:text-red-300" onClick={() => deleteMovie(movie.id)}>Delete</p>
             </div>
           </div>
         </div>

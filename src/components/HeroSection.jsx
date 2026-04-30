@@ -1,6 +1,6 @@
 import { top_movies } from '../utils/movieUtils.js'
 
-const HeroSection = ({ movies }) => {
+const HeroSection = ({ movies = [] }) => {
   const topMovie = top_movies(movies)[0]
   return (
     <div className='heroSection relative text-secondary flex flex-col items-left justify-end p-20 mb-30'>

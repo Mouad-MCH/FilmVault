@@ -4,9 +4,9 @@ import Filters from "./Filters"
 import MovieDetails from "./MovieDetails"
 import MovieFormModal from "./MovieFormModal"
 
-const LibrarySecssion = ({ movies = [], selectMovie, setSelectMovie, isModalOpen, setIsModalOpen, type, onSave, setType }) => {
-    const [ movieList, setMovieList ] = useState(movies)
-    
+const LibrarySecssion = ({ movies = [], selectMovie, setSelectMovie, isModalOpen, setIsModalOpen, type, onSave, setType, deleteMovie }) => {
+      const [ movieList, setMovieList ] = useState(null)
+    const displayedMovies = movieList ?? movies;
     
   return (
     <div className="library p-15">
@@ -14,7 +14,7 @@ const LibrarySecssion = ({ movies = [], selectMovie, setSelectMovie, isModalOpen
       <div className="display_movies w-full">
         <Filters movies={movies} setMovieList={setMovieList}/>
         <MovieList 
-          movies={movieList}
+          movies={displayedMovies}
           setSelectMovie={ setSelectMovie }
         />
 
@@ -25,6 +25,7 @@ const LibrarySecssion = ({ movies = [], selectMovie, setSelectMovie, isModalOpen
               setSelectMovie={setSelectMovie} 
               setType={setType}
               setIsModalOpen={setIsModalOpen}
+              deleteMovie={deleteMovie}
             />
           )
         }
