@@ -8,7 +8,7 @@ const Filters = ({ movies, setMovieList }) => {
     useEffect(() => {
         const filtered = filter_movies(movies, rating, option);
         setMovieList(filtered)
-    }, [option, rating, movies, setMovieList])
+    }, [movies, option, rating, setMovieList])
     
   return (
     <div className="filters w-full flex items-center justify-start gap-10 pl-20 mb-10 text-secondary">

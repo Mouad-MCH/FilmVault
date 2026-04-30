@@ -1,7 +1,7 @@
 import { top_movies } from "../utils/movieUtils.js"
 import MovieList from "./MovieList.jsx"
 
-const TopMovies = ({ movies, setSelectMovie }) => {
+const TopMovies = ({ movies = [], setSelectMovie }) => {
   return (
     <div className='topMovies w-full px-15 mb-20'>
         <h1 className="text-2xl font-extrabold text-secondary mb-10">TOP 5 Movies</h1>
