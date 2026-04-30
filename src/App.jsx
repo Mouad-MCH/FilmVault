@@ -61,6 +61,7 @@ const App = () => {
         setType={setType}
         deleteMovie={handleDeleteMovie}
       />
+      
     </div>
   );
 };

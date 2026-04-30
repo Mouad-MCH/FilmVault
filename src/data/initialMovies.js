@@ -17,7 +17,7 @@ export const movieData = [
 
     director: "Antoine Fuqua",
     actors: ["Jaafar Jackson", "Colman Domingo", "Nia Long"],
-    trailerUrl: "https://www.youtube.com/watch?v=example1",
+    trailerUrl: "https://youtu.be/N2fyexZ3x2M?si=iFjsto-je4FnBUPA",
   },
   {
     id: "tt16431404",
